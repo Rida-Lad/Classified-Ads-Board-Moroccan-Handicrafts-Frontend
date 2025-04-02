@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+.logo-font{
+  font-family: 'Rouge Script', cursive;
+  font-size: 32px;
+}
+.extreme-blur::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.891);
+    backdrop-filter: blur(100px); /* Much stronger blur than Tailwind provides */
+    z-index: -1;
+  }
+body{
+    background-color: #ffe5e5;
+}
