@@ -1,13 +1,16 @@
 import { useState } from 'react';
-import Navbar from './components/Navbar';
-function App() {
-  const [count, setCount] = useState(0);
+import HomePage from './pages/HomePage';
+import AddAd from './pages/AddAd';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+function App() {
   return (
-    <>
-      <Navbar/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/add" element={<AddAd />} />
+      </Routes>
+    </Router>
   );
 }
-
 export default App;
