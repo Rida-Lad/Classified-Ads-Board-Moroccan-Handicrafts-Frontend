@@ -65,6 +65,7 @@ const AdForm = () => {
           onChange={handleChange}
           maxLength={10}
           placeholder="Title (max 10 chars)"
+          required
         />
         {errors.title && <div className="error">{errors.title}</div>}
       </div>
@@ -77,6 +78,7 @@ const AdForm = () => {
           onChange={handleChange}
           maxLength={25}
           placeholder="Description (max 25 chars)"
+          required
         />
         {errors.description && <div className="error">{errors.description}</div>}
       </div>
@@ -91,13 +93,15 @@ const AdForm = () => {
           min="0.01"
           step="0.01"
           placeholder="Price (MAD)"
+          required
         />
         {errors.price && <div className="error">{errors.price}</div>}
       </div>
 
       {/* Category Select */}
       <div>
-        <select name="category" value={formData.category} onChange={handleChange}>
+          required
+          <select name="category" value={formData.category} onChange={handleChange} required>
           {['potteries', 'jewelries', 'carpets', 'zelliges', 'others'].map(opt => (
             <option key={opt} value={opt}>{opt}</option>
           ))}
@@ -112,6 +116,7 @@ const AdForm = () => {
           value={formData.phone_number}
           onChange={handleChange}
           placeholder="06XXXXXXXX"
+          required
         />
         {errors.phone_number && <div className="error">{errors.phone_number}</div>}
       </div>
@@ -123,6 +128,7 @@ const AdForm = () => {
           name="image"
           onChange={handleFile}
           accept="image/*"
+          required
         />
         {errors.image && <div className="error">{errors.image}</div>}
       </div>
