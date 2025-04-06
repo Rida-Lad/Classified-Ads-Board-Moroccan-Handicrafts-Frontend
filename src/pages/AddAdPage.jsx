@@ -215,7 +215,7 @@ const AdForm = () => {
       >
         Create Ad
       </button>
-
+   
       {accessCode && (
         <div className="mt-4 p-4 bg-green-100 text-green-700 rounded-md">
           Your access code: <strong>{accessCode}</strong> (Save this to manage your ad)
