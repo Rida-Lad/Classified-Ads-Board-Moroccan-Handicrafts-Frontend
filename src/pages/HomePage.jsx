@@ -34,9 +34,9 @@ function HomePage() {
     return (
         <>
             <Navbar />
-            <div className="body-home-bg min-h-screen">
+            <div className="min-h-screen">
                 <div className="container mx-auto px-4 py-8">
-                    <h1 className="text-4xl font-bold mb-8 text-gray-800 text-center">Recent Handicraft Ads</h1>
+                    <h1 style={{ fontFamily: 'Rouge Script' }} className="text-4xl font-bold mb-8 text-red-800">Recent Handicraft Ads:</h1>
 
                     {loading && <p className="text-center text-gray-600">Loading ads...</p>}
                     {error && <p className="text-center text-red-500">{error}</p>}
@@ -44,23 +44,27 @@ function HomePage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {ads.map(ad => (
                             <div key={ad.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                                <img
-                                    // In your image src attribute
-                                    src={`http://localhost:5000/uploads/${ad.image_path}`}
-                                    alt={ad.title}
-                                    className="w-full h-48 object-cover"
-                                />
+                                {/* Image container with aspect ratio handling */}
+                                <div className="h-60 w-full overflow-hidden">
+                                    <img
+                                        src={`http://localhost:5000/uploads/${ad.image_path}`}
+                                        alt={ad.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+
+                                {/* Rest of the card content remains unchanged */}
                                 <div className="p-4">
                                     <div className="flex justify-between items-start mb-2">
                                         <h2 className="text-xl font-semibold text-gray-800">{ad.title}</h2>
-                                        <span className="bg-blue-100 text-blue-800 text-sm font-medium px-2 py-1 rounded">
+                                        <span className="bg-red-100 text-red-800 text-sm font-medium px-2 py-1 rounded">
                                             {ad.category}
                                         </span>
                                     </div>
                                     <p className="text-gray-600 mb-3">{ad.description}</p>
 
                                     <div className="flex justify-between items-center mb-3">
-                                        <p className="text-lg font-bold text-green-600">{ad.price} MAD</p>
+                                        <p className="text-lg font-bold text-red-600">{ad.price} MAD</p>
                                         <p className="text-sm text-gray-500">{formatDate(ad.created_at)}</p>
                                     </div>
 
