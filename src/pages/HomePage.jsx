@@ -34,7 +34,7 @@ function HomePage() {
     return (
         <>
             <Navbar />
-            <div className="min-h-screen bg-gray-100">
+            <div className="body-home-bg min-h-screen">
                 <div className="container mx-auto px-4 py-8">
                     <h1 className="text-4xl font-bold mb-8 text-gray-800 text-center">Recent Handicraft Ads</h1>
 

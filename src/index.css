@@ -4,7 +4,10 @@
     font-family: 'Rouge Script', cursive;
     font-size: 32px;
 }
-
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: rgb(255, 249, 249);
+}
 .extreme-blur::before {
     content: "";
     position: absolute;
@@ -16,5 +19,5 @@
 }
 
 .body-home-bg {
-    background-color: #ffe5e5;
+    background-color: #ffefef;
 }
