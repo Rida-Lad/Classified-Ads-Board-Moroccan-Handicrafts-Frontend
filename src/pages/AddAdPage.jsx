@@ -103,7 +103,7 @@ const AdForm = () => {
                     />
                     {errors.description && <p className="mt-1 text-sm text-red-600">{errors.description}</p>}
                 </div>
-
+ 
                 {/* Price Input */}
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700 mb-1">
