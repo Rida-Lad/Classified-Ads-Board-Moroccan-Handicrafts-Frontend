@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 function HomePage() {
     const [ads, setAds] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('');
 
     useEffect(() => {
         const fetchAds = async () => {
@@ -31,20 +34,70 @@ function HomePage() {
         return phone.replace(/(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/, '$1-$2-$3-$4-$5');
     };
 
+    // Filter ads based on search and category
+    const filteredAds = ads.filter(ad => {
+        const matchesSearch = ad.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                             ad.description.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesCategory = selectedCategory ? ad.category === selectedCategory : true;
+        return matchesSearch && matchesCategory;
+    });
+
+    // Get unique categories from ads
+    const categories = [...new Set(ads.map(ad => ad.category))].sort();
+
     return (
         <>
             <Navbar />
             <div className="min-h-screen">
                 <div className="container mx-auto px-4 py-8">
-                    <h1 style={{ fontFamily: 'Rouge Script' }} className="text-4xl font-bold mb-8 text-red-800">Recent Handicraft Ads:</h1>
+                    <div className="flex flex-wrap justify-between items-center mb-8 gap-4">
+                        <h1 style={{ fontFamily: 'Rouge Script' }} className="text-4xl font-bold text-red-800">
+                            Recent Handicraft Ads:
+                        </h1>
+                        
+                        <div className="flex flex-wrap gap-4">
+                            <Link
+                                to="/manage"
+                                className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+                            >
+                                Manage Ads
+                            </Link>
+                            <Link
+                                to="/add"
+                                className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+                            >
+                                Add New Ad
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Search and Filter Section */}
+                    <div className="flex flex-wrap gap-4 mb-8">
+                        <input
+                            type="text"
+                            placeholder="Search ads..."
+                            className="px-4 py-2 border rounded flex-grow max-w-xs border-red-500 focus:border-red-600"
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                        <select
+                            className="px-4 py-2 border rounded border-red-500"
+                            value={selectedCategory}
+                            onChange={(e) => setSelectedCategory(e.target.value)}
+                        >
+                            <option value="">All Categories</option>
+                            {categories.map(category => (
+                                <option key={category} value={category}>{category}</option>
+                            ))}
+                        </select>
+                    </div>
 
                     {loading && <p className="text-center text-gray-600">Loading ads...</p>}
                     {error && <p className="text-center text-red-500">{error}</p>}
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {ads.map(ad => (
+                        {filteredAds.map(ad => (
                             <div key={ad.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                                {/* Image container with aspect ratio handling */}
                                 <div className="h-60 w-full overflow-hidden">
                                     <img
                                         src={`http://localhost:5000/uploads/${ad.image_path}`}
@@ -53,7 +106,6 @@ function HomePage() {
                                     />
                                 </div>
 
-                                {/* Rest of the card content remains unchanged */}
                                 <div className="p-4">
                                     <div className="flex justify-between items-start mb-2">
                                         <h2 className="text-xl font-semibold text-gray-800">{ad.title}</h2>
