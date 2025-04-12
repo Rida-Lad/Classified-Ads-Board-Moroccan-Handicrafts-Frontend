@@ -1,12 +1,55 @@
-# React + Vite
+# Classified Ads Board for Moroccan Handicrafts - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, mobile-friendly platform built using React.js, Vite, and Tailwind CSS where visitors can freely post, manage, and explore Moroccan handicraft ads — no authentication required.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 Red-themed modern UI with Tailwind CSS
+- 📝 Visitors can create ads with:
+  - Title, Description
+  - Image upload
+  - Category selection
+  - Price
+  - Phone number
+- 🆔 Auto-generated 6-digit access code for ad management
+- 🔧 `/manage` page: edit or delete an ad using the access code
+- 🏠 Homepage displays all ads:
+  - Date and time of creation in a stylish format
+  - Search bar and category filter
+- 📊 Admin Panel with statistics:
+  - Bar and Pie charts (using Chart.js)
+- 📡 Uses Axios for HTTP requests
 
-## Expanding the ESLint configuration
+## 🔧 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React.js + Vite
+- **Styling**: Tailwind CSS
+- **Routing**: React Router
+- **Charts**: Chart.js
+- **HTTP Requests**: Axios
+
+## 🖥 Installation & Running
+
+```bash
+# Clone the repository
+git clone https://github.com/Rida-Lad/classified-ads-board-for-moroccan-handicrafts-Frontend.git
+cd classified-ads-board-for-moroccan-handicrafts-Frontend
+```
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+
+📁 Folder Structure (simplified)
+src/
+│
+├── components/
+├── pages/
+├── App.jsx
+└── main.jsx
+
+
+##🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
