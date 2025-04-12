@@ -15,6 +15,17 @@
 
 A responsive, mobile-friendly classified ads platform dedicated to Moroccan handicrafts. Users can freely browse, post and manage beautiful artisanal products without authentication requirements.
 
+## 📸 Screenshots
+
+<div align="center">
+  <img src="./public/screenshots/Homepage1.png" width="45%" alt="HomePage 1">
+  <img src="./public/screenshots/Homepage2.png" width="45%" alt="HomePage 2">
+  <img src="./public/screenshots/CreateAd.png" width="45%" alt="Creation Ad form" style="margin-top: 20px">
+  <img src="./public/screenshots/ManageAd1.png" width="45%" alt="The access code form" style="margin-top: 20px">
+  <img src="./public/screenshots/ManageAd2.png" width="45%" alt="Form of managing the Ad" style="margin-top: 20px">
+  <img src="./public/screenshots/Admin.png" width="45%" alt="Admin Panel" style="margin-top: 20px">
+
+</div>
 
 ## 🌟 Features
 
