@@ -69,12 +69,32 @@ Monitor platform activity with our comprehensive admin panel featuring:
 ## 🛠️ Tech Stack
 
 <div align="center">
-  
-| Frontend | Styling | Data Visualization | API Communication |
-|:--------:|:-------:|:------------------:|:-----------------:|
-| React.js + Vite | Tailwind CSS | Chart.js | Axios |
-| <img src="https://via.placeholder.com/50" width="50"> | <img src="https://via.placeholder.com/50" width="50"> | <img src="https://via.placeholder.com/50" width="50"> | <img src="https://via.placeholder.com/50" width="50"> |
-
+<table border="0">
+  <tr>
+    <th align="center">Frontend</th>
+    <th align="center">Styling</th>
+    <th align="center">Data Visualization</th>
+    <th align="center">API Communication</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="40" height="40"><br>
+      React.js + Vite
+    </td>
+    <td align="center">
+      <img src="https://imgs.search.brave.com/oG3o98QjKAbPSLZPTOvPhupljLwbNmIQ42GfRq2TFXw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9k/L2Q1L1RhaWx3aW5k/X0NTU19Mb2dvLnN2/Zw" width="40" height="40"><br>
+      Tailwind CSS
+    </td>
+    <td align="center">
+      <img src="https://www.chartjs.org/media/logo-title.svg" width="40" height="40"><br>
+      Chart.js
+    </td>
+    <td align="center">
+      <img src="https://axios-http.com/assets/logo.svg" width="40" height="40"><br>
+      Axios
+    </td>
+  </tr>
+</table>
 </div>
 
 ## 🚀 Getting Started
@@ -140,9 +160,6 @@ We welcome contributions to enhance the platform! Please follow these steps:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📜 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgements
 
