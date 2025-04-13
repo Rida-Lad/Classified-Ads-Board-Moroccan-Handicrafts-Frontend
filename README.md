@@ -133,33 +133,6 @@ npm run dev
 
 Visit `http://localhost:5173` in your browser to view the application.
 
-## 📁 Project Structure
-
-```
-src/
-│
-├── assets/          # Static assets, images, and icons
-│
-├── components/      # Reusable UI components
-│   ├── AdCard/
-│   ├── SearchBar/
-│   ├── CategoryFilter/
-│   └── ...
-│
-├── pages/           # Page components
-│   ├── Home/
-│   ├── CreateAd/
-│   ├── ManageAd/
-│   ├── AdminPanel/
-│   └── ...
-│
-├── services/        # API services and utilities
-│
-├── styles/          # Global styles and Tailwind config
-│
-├── App.jsx          # Main application component
-└── main.jsx         # Entry point
-```
 
 ## 🤝 Contributing
 
