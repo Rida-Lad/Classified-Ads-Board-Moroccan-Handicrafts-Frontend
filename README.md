@@ -7,7 +7,7 @@
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
 [![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-red.svg?style=for-the-badge)](LICENSE)
+
 
 </div>
 
@@ -133,33 +133,6 @@ npm run dev
 
 Visit `http://localhost:5173` in your browser to view the application.
 
-## 📁 Project Structure
-
-```
-src/
-│
-├── assets/          # Static assets, images, and icons
-│
-├── components/      # Reusable UI components
-│   ├── AdCard/
-│   ├── SearchBar/
-│   ├── CategoryFilter/
-│   └── ...
-│
-├── pages/           # Page components
-│   ├── Home/
-│   ├── CreateAd/
-│   ├── ManageAd/
-│   ├── AdminPanel/
-│   └── ...
-│
-├── services/        # API services and utilities
-│
-├── styles/          # Global styles and Tailwind config
-│
-├── App.jsx          # Main application component
-└── main.jsx         # Entry point
-```
 
 ## 🤝 Contributing
 
